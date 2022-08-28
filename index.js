@@ -17,6 +17,10 @@ mongoose.connect(DB, () => {
   console.log("Database connection successfully done!");
 });
 
+app.get("/", (req, res) => {
+  res.send("Server started");
+});
+
 app.use("/api/notes", notesRoutes);
 app.use("/api/auth", authRoutes);
 
