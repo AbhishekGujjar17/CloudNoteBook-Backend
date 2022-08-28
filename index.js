@@ -18,7 +18,7 @@ mongoose.connect(DB, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Server started");
+  res.json("Server started");
 });
 
 app.use("/api/notes", notesRoutes);
